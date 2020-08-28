@@ -66,3 +66,5 @@ The line extraction pipeline proved very efficient using movies even with challe
 Final result with good detection performance.
 
 ![](asset/final.PNG)
+
+![](asset/challenge.mp4)
