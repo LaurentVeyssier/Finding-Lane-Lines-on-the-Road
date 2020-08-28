@@ -9,6 +9,13 @@ In this project a line detection algorithm is proposed to detect lane lines in i
 
 This project is part of UDACITY's Self-Driving Car Engineer Nanodegree.
 
+## Issue Statement
+
+The objective is to be able to detect lane lines on images and videos real-time. Images used present various difficult levels with shades, solid and dotted lines, varing colors. A sample of the training set is shown below.
+
+![](asset/sample.PNG)
+
+
 ## Detection Pipeline Workflow 
 
 
