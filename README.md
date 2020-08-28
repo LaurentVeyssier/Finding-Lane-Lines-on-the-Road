@@ -9,7 +9,7 @@ In this project a line detection algorithm is proposed to detect lane lines in i
 
 This project is part of UDACITY's Self-Driving Car Engineer Nanodegree.
 
-## Notebook workflow pipeline
+## Detection Pipeline Workflow 
 
 
 ## Results
