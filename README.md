@@ -11,7 +11,7 @@ This project is part of UDACITY's Self-Driving Car Engineer Nanodegree.
 
 ## Issue Statement
 
-The objective is to be able to detect lane lines in images and videos real-time. Images present various difficult levels with varying levels of shade, solid and dotted lines, of different colors. A sample of the training set is shown below.
+The objective is to be able to detect lane lines in images and videos real-time. Images present various difficult levels with varying levels of shade, solid and dotted lines, of different colors and various x-y dimensions. A sample of the training set is shown below.
 
 ![](asset/sample.PNG)
 
