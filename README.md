@@ -18,5 +18,14 @@ The objective is to be able to detect lane lines in images and videos real-time.
 
 ## Detection Pipeline Workflow 
 
+I started by exploring the training images and looking at various color spaces to indetify the best detection strategy. The images come with yellow and white lane lines. I opted for:
+- Using LAB color space, and more particularly the B channel, as the yellow lines stand neatly out. This strategy proved to perform superbly on images with shades while other color spaces could not perform similarly.
+- Using HLS color space for white lines.
+
+Pipeline:
+- Extract yellow lines using LAB B channel
+- Extract white lines using HLS color space.
+In both approaches, I used a filtring approach with `cv2.inRange()`. I validated the approach testing `cv2.HoughLinesP` 
+
 
 ## Results
