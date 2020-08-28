@@ -24,8 +24,45 @@ I started by exploring the training images and looking at various color spaces t
 
 Pipeline:
 - Extract yellow lines using LAB B channel
+White is not extracted at all but the yellow extraction proves robust despite some deterioration.
+
+![](asset/yellow_line.PNG)
+
 - Extract white lines using HLS color space.
-In both approaches, I used a filtring approach with `cv2.inRange()`. I validated the approach testing `cv2.HoughLinesP` 
+Here, only white is extracted. I re-inforce features using `cv2.dilate()` and `cv2.erode()` steps. Note that a lot of noise is also captured (white car on the right) which will need to be handled next.
+
+![](asset/white_line.PNG)
+
+In both approaches, I used a filtring approach with `cv2.inRange()`. I validated the approach, even with challenging images, testing line extracting using `cv2.HoughLinesP`
+
+- Combine both extractions so that to be able to overlay onto the original images at a later stage.
+Note that I performed several steps using `cv2.dilate()` and `cv2.erode()` in order to enhance the extracted line patterns at this stage. The use of a Canny filter did not prove useful on top.
+
+In the sample below, we can see a couple of yellow road signs extracted during the process ! Line re-inforcement is also visible. 
+
+![](asset/combined.PNG)
+
+At this stage we now must:
+- Eliminate captured noise using Region Of Interest approach. The output is a clean mask capturing both white and yellow lines even in shady environment.
+In the example below, we can see the noise which gets eliminated (no more white car!) and we are left with a neat mask capturing both lanes.
+
+![](asset/clean.PNG)
+
+Now we can finalize:
+- Apply Hough Line detection on the mask and collect identified line segments for the next additonal step.
+In the example below, I validate the good performance on both line types despite shadow conditions. Next we will make up for full solid lines.
+
+![](asset/result.PNG)
+
+- Calculate line formulas in order to draw and overlay full, solid, lines onto the original images. I used a mask to perform this combination step.
+
+The output is shown in the next section below.
+
+The line extraction pipeline proved very efficient using movies even with challenging shading conditions.
 
 
 ## Results
+
+Final result with good detection performance.
+
+![](asset/final.PNG)
