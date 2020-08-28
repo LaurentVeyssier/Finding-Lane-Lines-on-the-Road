@@ -69,4 +69,4 @@ Final result with good detection performance.
 
 ![](asset/final_output.gif)
 
-![](asset/output2.gif)
+![](asset/output_2.gif)
