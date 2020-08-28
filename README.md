@@ -68,3 +68,5 @@ Final result with good detection performance.
 ![](asset/final.PNG)
 
 ![](asset/final_output.gif)
+
+![](asset/output2.gif)
