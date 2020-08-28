@@ -67,4 +67,4 @@ Final result with good detection performance.
 
 ![](asset/final.PNG)
 
-![](asset/challenge.mp4)
+![](asset/final_output.gif)
