@@ -1,6 +1,8 @@
 # Finding-Lane-Lines-on-the-Road
 Create a Lane Finding pipeline that finds lane lines on the road
 
+![](asset/final_output.gif)
+
 ## Description
 
 When we drive, we use our eyes to decide where to go. The lines on the road act as our constant reference for where to steer the vehicle. Naturally, one of the first things we would like to do in developing a self-driving car is to automatically detect lane lines using an algorithm.
@@ -66,7 +68,5 @@ The line extraction pipeline proved very efficient using movies even with challe
 Final result with good detection performance.
 
 ![](asset/final.PNG)
-
-![](asset/final_output.gif)
 
 ![](asset/output_2.gif)
